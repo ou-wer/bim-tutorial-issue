@@ -1,0 +1,225 @@
+Python 3.8.6 (default, Sep 23 2020, 13:54:27) 
+[GCC 9.3.0] on linux
+Type 'help', 'copyright', 'credits' or 'license' for more information.
+>>> Gui.runCommand('Std_Workbench',18)
+>>> Gui.runCommand('Std_ViewStatusBar',1)
+>>> exec(open('/nix/store/wq6dw09yplgh1qbd2msrqdmrpifzmxbp-freecad-unstable-2020-12-08/share/Mod/Start/StartPage/LoadNew.py').read())
+>>> # App.setActiveDocument("Unnamed")
+>>> # App.ActiveDocument=App.getDocument("Unnamed")
+>>> # Gui.ActiveDocument=Gui.getDocument("Unnamed")
+>>> Gui.runCommand('Std_OrthographicCamera',1)
+>>> ### Begin command Std_Workbench
+>>> Gui.activateWorkbench("ArchWorkbench")
+>>> ### End command Std_Workbench
+>>> Gui.runCommand('Std_DlgPreferences',0)
+>>> FreeCAD.DraftWorkingPlane.alignToPointAndAxis(FreeCAD.Vector(0.0, 0.0, 0.0), FreeCAD.Vector(0, 0, 1), 0.0)
+>>> FreeCADGui.Snapper.setGrid()
+>>> Gui.runCommand('Draft_Line',0)
+>>> Gui.runCommand("Draft_Snap_Grid")
+>>> Gui.runCommand("Draft_Snap_Grid")
+>>> ### Begin command Std_ViewRear
+>>> Gui.activeDocument().activeView().viewRear()
+>>> ### End command Std_ViewRear
+>>> ### Begin command Std_ViewRear
+>>> Gui.activeDocument().activeView().viewRear()
+>>> ### End command Std_ViewRear
+>>> ### Begin command Std_ViewRear
+>>> Gui.activeDocument().activeView().viewRear()
+>>> ### End command Std_ViewRear
+>>> ### Begin command Std_ViewBottom
+>>> Gui.activeDocument().activeView().viewBottom()
+>>> ### End command Std_ViewBottom
+>>> ### Begin command Std_ViewTop
+>>> Gui.activeDocument().activeView().viewTop()
+>>> ### End command Std_ViewTop
+>>> FreeCAD.DraftWorkingPlane.alignToPointAndAxis(FreeCAD.Vector(0.0, 0.0, 0.0), FreeCAD.Vector(0, 0, 1), 0.0)
+>>> FreeCADGui.Snapper.setGrid()
+>>> Gui.runCommand("Draft_Snap_Grid")
+>>> Gui.runCommand("Draft_Snap_Grid")
+>>> ### Begin command Std_PerspectiveCamera
+>>> Gui.activeDocument().activeView().setCameraType("Perspective")
+>>> ### End command Std_PerspectiveCamera
+>>> Gui.runCommand('Std_OrthographicCamera',0)
+>>> Gui.runCommand('Std_PerspectiveCamera',1)
+>>> ### Begin command Std_OrthographicCamera
+>>> Gui.activeDocument().activeView().setCameraType("Orthographic")
+>>> ### End command Std_OrthographicCamera
+>>> Gui.runCommand('Std_OrthographicCamera',1)
+>>> Gui.runCommand('Std_PerspectiveCamera',0)
+>>> ### Begin command Std_PerspectiveCamera
+>>> Gui.activeDocument().activeView().setCameraType("Perspective")
+>>> ### End command Std_PerspectiveCamera
+>>> Gui.runCommand('Std_OrthographicCamera',0)
+>>> Gui.runCommand('Std_PerspectiveCamera',1)
+>>> Gui.runCommand("Draft_Snap_Grid")
+>>> Gui.runCommand("Draft_Snap_Grid")
+>>> ### Begin command Std_OrthographicCamera
+>>> Gui.activeDocument().activeView().setCameraType("Orthographic")
+>>> ### End command Std_OrthographicCamera
+>>> Gui.runCommand('Std_OrthographicCamera',1)
+>>> Gui.runCommand('Std_PerspectiveCamera',0)
+>>> Gui.runCommand('Std_DlgCustomize',0)
+>>> Gui.runCommand('Std_DlgPreferences',0)
+>>> Gui.runCommand('Draft_Line',0)
+>>> App.closeDocument("Unnamed")
+>>> # App.setActiveDocument("")
+>>> # App.ActiveDocument=None
+>>> # Gui.ActiveDocument=None
+>>> ### Begin command Std_New
+>>> App.newDocument("Unnamed")
+>>> # App.setActiveDocument("Unnamed")
+>>> # App.ActiveDocument=App.getDocument("Unnamed")
+>>> # Gui.ActiveDocument=Gui.getDocument("Unnamed")
+>>> Gui.activeDocument().activeView().viewDefaultOrientation()
+>>> ### End command Std_New
+>>> Gui.runCommand("Draft_Snap_Grid")
+>>> Gui.runCommand("Draft_Snap_Grid")
+>>> Gui.runCommand("Draft_Snap_Lock")
+>>> Gui.runCommand("Draft_Snap_Lock")
+>>> Gui.runCommand("Draft_Snap_Ortho")
+>>> Gui.runCommand("Draft_Snap_Ortho")
+>>> Gui.runCommand("Draft_Snap_WorkingPlane")
+>>> Gui.runCommand("Draft_Snap_WorkingPlane")
+>>> Gui.runCommand("Draft_ToggleGrid")
+>>> Gui.runCommand("Draft_ToggleGrid")
+>>> FreeCAD.DraftWorkingPlane.alignToPointAndAxis(FreeCAD.Vector(0.0, 0.0, 0.0), FreeCAD.Vector(0, 0, 1), 0.0)
+>>> FreeCADGui.Snapper.setGrid()
+>>> Gui.runCommand('Draft_ToggleGrid',0)
+>>> Gui.runCommand('Draft_ToggleGrid',0)
+>>> Gui.toggleGrid()
+Traceback (most recent call last):
+  File "<input>", line 1, in <module>
+AttributeError: module 'FreeCADGui' has no attribute 'toggleGrid'
+>>> Gui.runCommand('Draft_ToggleGrid',1)
+>>> Gui.runCommand('Draft_ToggleGrid',0)
+>>>  Gui.runCommand('Draft_Line',0)
+>>> import Draft
+>>> pl = FreeCAD.Placement()
+>>> pl.Rotation.Q = (0.0, 0.0, 1.5308084989341915e-17, 1.0)
+>>> pl.Base = FreeCAD.Vector(0.0, 0.0, 0.0)
+>>> points = [FreeCAD.Vector(0.0, 0.0, 0.0), FreeCAD.Vector(0.0, 3000.0, 0.0)]
+>>> line = Draft.makeWire(points, placement=pl, closed=False, face=True, support=None)
+>>> # Gui.Selection.addSelection('Unnamed','Line')
+>>> Draft.autogroup(line)
+>>> FreeCAD.ActiveDocument.recompute()
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Line','Vertex2',0,3000,0)
+>>> Gui.runCommand('Draft_Line',0)
+>>> # Gui.Selection.clearSelection()
+>>> pl = FreeCAD.Placement()
+>>> pl.Rotation.Q = (0.0, 0.0, 1.5308084989341915e-17, 1.0)
+>>> pl.Base = FreeCAD.Vector(0.0, 3000.0, 0.0)
+>>> points = [FreeCAD.Vector(0.0, 3000.0, 0.0), FreeCAD.Vector(4000.0, 3000.0000000000005, 0.0)]
+>>> line = Draft.makeWire(points, placement=pl, closed=False, face=True, support=None)
+>>> # Gui.Selection.addSelection('Unnamed','Line001')
+>>> Draft.autogroup(line)
+>>> FreeCAD.ActiveDocument.recompute()
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Line001','Vertex2',4000,3000,0)
+>>> Gui.runCommand('Draft_Line',0)
+>>> # Gui.Selection.clearSelection()
+>>> pl = FreeCAD.Placement()
+>>> pl.Rotation.Q = (0.0, 0.0, 1.5308084989341915e-17, 1.0)
+>>> pl.Base = FreeCAD.Vector(4000.0, 3000.0, 0.0)
+>>> points = [FreeCAD.Vector(4000.0, 3000.0, 0.0), FreeCAD.Vector(4000.0, 2.4492935982947065e-13, 0.0)]
+>>> line = Draft.makeWire(points, placement=pl, closed=False, face=True, support=None)
+>>> # Gui.Selection.addSelection('Unnamed','Line002')
+>>> Draft.autogroup(line)
+>>> FreeCAD.ActiveDocument.recompute()
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Line002','Vertex2',4000,0,0)
+>>> Gui.runCommand('Draft_Line',0)
+>>> # Gui.Selection.clearSelection()
+>>> pl = FreeCAD.Placement()
+>>> pl.Rotation.Q = (0.0, 0.0, 1.5308084989341915e-17, 1.0)
+>>> pl.Base = FreeCAD.Vector(4000.0, 0.0, 0.0)
+>>> points = [FreeCAD.Vector(4000.0, 0.0, 0.0), FreeCAD.Vector(0.0, 0.0, 0.0)]
+>>> line = Draft.makeWire(points, placement=pl, closed=False, face=True, support=None)
+>>> # Gui.Selection.addSelection('Unnamed','Line003')
+>>> Draft.autogroup(line)
+>>> FreeCAD.ActiveDocument.recompute()
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Line','Vertex1')
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Line','Edge1',0,2670.46,0)
+>>> ### Begin command Arch_Wall
+>>> import Arch
+>>> obj = Arch.makeWall(FreeCAD.ActiveDocument.Line)
+>>> Draft.autogroup(obj)
+>>> ### End command Arch_Wall
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Line001','Edge1',2857.04,3000,0)
+>>> ### Begin command Arch_Wall
+>>> obj = Arch.makeWall(FreeCAD.ActiveDocument.Line001)
+>>> Draft.autogroup(obj)
+>>> ### End command Arch_Wall
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Line002','Edge1',4000,1823.57,0)
+>>> ### Begin command Arch_Wall
+>>> obj = Arch.makeWall(FreeCAD.ActiveDocument.Line002)
+>>> Draft.autogroup(obj)
+>>> ### End command Arch_Wall
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Line003','Edge1',3479.75,-1.69407e-21,0)
+>>> ### Begin command Arch_Wall
+>>> obj = Arch.makeWall(FreeCAD.ActiveDocument.Line003)
+>>> Draft.autogroup(obj)
+>>> ### End command Arch_Wall
+>>> Gui.runCommand('Std_BoxSelection',0)
+>>> # Gui.Selection.clearSelection('Unnamed')
+>>> # Gui.Selection.addSelection('Unnamed','Wall')
+>>> # Gui.Selection.addSelection('Unnamed','Wall001')
+>>> # Gui.Selection.addSelection('Unnamed','Wall002')
+>>> # Gui.Selection.addSelection('Unnamed','Wall003')
+>>> # Gui.Selection.clearSelection()
+>>> Gui.runCommand('Std_BoxSelection',0)
+>>> # Gui.Selection.addSelection('Unnamed','Wall')
+>>> # Gui.Selection.addSelection('Unnamed','Wall001')
+>>> # Gui.Selection.addSelection('Unnamed','Wall002')
+>>> # Gui.Selection.addSelection('Unnamed','Wall003')
+>>> FreeCAD.getDocument('Unnamed').getObject('Wall').Align = u"Left"
+>>> FreeCAD.getDocument('Unnamed').getObject('Wall001').Align = u"Left"
+>>> FreeCAD.getDocument('Unnamed').getObject('Wall002').Align = u"Left"
+>>> FreeCAD.getDocument('Unnamed').getObject('Wall003').Align = u"Left"
+>>> 
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Wall','Edge3',0,1657.25,0)
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Wall','Edge3',0,1910.21,0)
+>>> # Gui.Selection.addSelection('Unnamed','Wall001','Edge3',1432.46,3000,0)
+>>> # Gui.Selection.addSelection('Unnamed','Wall002','Edge3',4000,1994.52,0)
+>>> # Gui.Selection.addSelection('Unnamed','Wall003','Edge3',2849,0,0)
+>>> ### Begin command Arch_Add
+>>> Arch.addComponents([FreeCAD.ActiveDocument.Wall,FreeCAD.ActiveDocument.Wall001,FreeCAD.ActiveDocument.Wall002],FreeCAD.ActiveDocument.Wall003)
+>>> ### End command Arch_Add
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Wall003','Edge11',200,2112.57,0)
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Wall003','Edge5',960.279,2800,0)
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Wall003','Edge11',200,1809.03,0)
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Wall003','Edge5',1381.87,2800,0)
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Wall003','Edge1',3800,1792.16,0)
+>>> # Gui.Selection.clearSelection()
+>>> # Gui.Selection.addSelection('Unnamed','Wall003','Edge11',200,1943.93,0)
+>>> # Gui.Selection.addSelection('Unnamed','Wall003','Edge5',892.825,2800,0)
+>>> # Gui.Selection.addSelection('Unnamed','Wall003','Edge1',3800,1927.07,0)
+>>> # Gui.Selection.addSelection('Unnamed','Wall003','Edge8',2292.5,200,0)
+>>> Gui.runCommand("Draft_Snap_Ortho")
+>>> # Gui.Selection.clearSelection()
+>>> Gui.runCommand("Draft_Snap_Ortho")
+>>> FreeCAD.DraftWorkingPlane.reset()
+>>> FreeCADGui.Snapper.setGrid()
+>>> ### Begin command Std_SaveAs
+>>> Gui.SendMsgToActiveView("SaveAs")
+>>> App.getDocument("Unnamed").saveAs(u"/home/x/bim2.FCStd")
+>>> ### End command Std_SaveAs
+>>> Gui.runCommand('Arch_Window',0)
+>>> import math,FreeCAD,Arch,WorkingPlane
+>>> pl = WorkingPlane.getPlacementFromFace(FreeCAD.ActiveDocument.Wall003.Shape.Faces[8])
+>>> pl.Base = FreeCAD.Vector(2292.04296875,0.0,10.0)
+>>> win = Arch.makeWindowPreset("Open 1-pane",width=400.0,height=700.0,h1=102.0,h2=0.0,h3=10.0,w1=10.0,w2=10.0,o1=10.0,o2=10.0,placement=pl)
+>>> win.Hosts = [FreeCAD.ActiveDocument.Wall003]
+>>> 
